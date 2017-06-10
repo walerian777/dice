@@ -8,9 +8,12 @@ Gem::Specification.new do |s|
   s.description   = 'CLI for simulating dice rolls.'
   s.authors       = ['Walerian Sobczak']
   s.email         = 'walerian.sobczak@gmail.com'
+  s.homepage      = 'https://github.com/walerian777/dice'
+
   s.files         = `git ls-files`.split("\n")
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = %w(lib)
-  s.homepage      = 'https://github.com/walerian777/dice'
+
+  s.add_development_dependency 'rspec', '~> 3.5.0'
 end
