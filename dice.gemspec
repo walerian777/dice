@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), 'lib/dice/version')
 
 Gem::Specification.new do |s|
-  s.name          = 'dice'
+  s.name          = 'dice-cli'
   s.version       = Dice::VERSION
   s.licenses      = ['MIT']
   s.summary       = 'Dice'
@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = %w(lib)
 
-  s.add_development_dependency 'rspec', '~> 3.5.0'
+  s.add_development_dependency 'rspec', '~> 3.5', '>= 3.5.0'
 end
