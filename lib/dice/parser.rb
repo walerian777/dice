@@ -5,11 +5,12 @@ module Dice
   class Parser
     attr_reader :options
 
-    def initialize
+    def initialize(args)
       @options = {}
+      @args = args
     end
 
-    def call(args)
+    def call
       OptionParser.new do |parser|
         parser.banner = 'Usage: dice [options]'
         parser.version = Dice::VERSION
@@ -26,7 +27,7 @@ module Dice
           puts parser
           exit
         end
-      end.parse!(args)
+      end.parse!(@args)
     end
   end
 end

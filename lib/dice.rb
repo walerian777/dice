@@ -3,8 +3,8 @@ require_relative 'dice/roller'
 
 module Dice
   def self.parse(args)
-    parser = Parser.new
-    parser.call(args)
+    parser = Parser.new(args)
+    parser.call
     @options = parser.options
   end
 
